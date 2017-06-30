@@ -29,8 +29,7 @@
             </form>
         </div>
     </div>
-    
-    <?php include "/views/public/js.html" ?>
+
 
     <script>
 
@@ -75,19 +74,12 @@
         // })
 
 
-        $("#login-form").submit(function(){
-            $(this).ajaxSubmit({
-                url: "/api/login",
-                type: "post",
-                success: function(data){
-                    if(data.code == 200){
-                        $.cookie("userinfo", JSON.stringify(data.result));
-                        location.href = "/";
-                    }
-                }
-            });
-            return false;
-        })    
+          
     </script>
+    <?php include "/views/public/js.html" ?>
+    <script type="text/javascript">
+        require(["static/js/dashboard/login"]);
+    </script>
+    
 </body>
 </html>
