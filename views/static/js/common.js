@@ -1,4 +1,18 @@
-define(["jquery","template","cookie"],function($,template){
+define(["jquery","template","NProgress","cookie","bootstrap"],function($,template,NProgress){
+	NProgress.start();
+	NProgress.done();
+
+	//当页面中任何一个请求被发送,ajax全局事件就会被触发  ajax所有的全局事件都有绑定到document上
+	$(document).ajaxStart(function(){
+		$('.loadModal').modal('show');
+		NProgress.start();
+
+	});
+	$(document).ajaxStop(function(){
+		NProgress.done();
+		$('.loadModal').modal('hide');
+	})
+
 
 	$(function(){
 
