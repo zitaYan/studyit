@@ -14,7 +14,8 @@ require.config({
         "ckeditor":"assets/ckeditor/ckeditor",
         "region":"assets/jquery-region/jquery.region",
         "uploadify":"assets/uploadify/jquery.uploadify",
-        "jcrop":"assets/jcrop/js/Jcrop"
+        "jcrop":"assets/jcrop/js/Jcrop",
+        "echarts":"assets/echarts/echarts.common.min"
     },
     shim:{
         "bootstrap":{
